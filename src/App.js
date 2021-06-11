@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import api from './api';
 import './App.css'; 
 import Header from './components/Header/Header';
-import CityList from './components/CityList/CityList';
+import ListCity from './components/CityList/ListCity';
 import config from './config';
 import { parseQuery } from './helpers';
 import { Fragment } from 'react';
@@ -14,6 +14,14 @@ function App() {
   const [weatherType, setWeatherType] = useState(null);
   const [weatherDesc, setWeatherDesc] = useState(null);
 
+  const [wind, setWind] = useState(null);
+  const [directionName, setDirectionName] = useState(null);
+  const [pressure,  setPressure] = useState(null);
+  const [humidity,  setHumidity] = useState(null);
+  const [precipitation,  setPrecipitation] = useState(null);
+  const [predominantly, setPredominantlyn] = useState(null);
+
+
   useEffect(() => {
     /*fetch('http://api.openweathermap.org/data/2.5/weather?id=532288&lang=ru&appid=ac8c195b8eaeee4efcfa4f3a9422bc2c')
         .then(function (resp) { return resp.json() })
@@ -23,7 +31,7 @@ function App() {
             setWeatherDesc()
             console.log(data);
             document.querySelector('.package-name').textContent = data.name;
-            document.querySelector('.price').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
+            document.querySelector('.temperature').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
             document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
 
 
@@ -36,7 +44,7 @@ function App() {
       const query =
         "/weather?" +
         parseQuery({
-          id: "532288",
+          id: "542420",
           lang: "ru",
           appid: config.appid
         });
@@ -49,13 +57,21 @@ function App() {
         setCity(res.data.name);
         setTemp(Math.round(res.data.main.temp - 273));
         setWeatherType(res.data.weather[0].main);
+        setWind(res.data.wind.speed);
+        setDirectionName(res.data.wind.deg);
+
+        setPressure(res.data.main.pressure);
+        setHumidity(res.data.main.humidity);
+        setPrecipitation(res.data.clouds.precipitation);
+        // setPredominantly(res.data.main.predominantly);
       });
   }, [])
 
   return (
     <Fragment>
-      <Header city={city} temp={temp} weatherType={weatherType} />
-      {/*<CityList /> */}
+      <Header city={city} temp={temp} weatherType={weatherType} wind={wind} directionName={directionName} pressure={pressure} 
+      humidity={humidity} precipitation={precipitation} predominantly={predominantly}    />
+      {/* <CityList /> */}
     </Fragment>
   );
 }

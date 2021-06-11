@@ -6,13 +6,20 @@ const CityList = () => {
 
     console.log(cities);
 
+let search = "М" // Поле поиска
+let cities = [] // Массив с json
+let result = cities.filter((city) => {
+return city.name.indexOf(search) > -1;
+});
+
+
     return (
         <>
             <Form>  
                 <Form.Control type="text" placeholder="Поиск" />
             </Form>
 
-            {/*<ListGroup>
+            {/* <ListGroup>
                 {cities.map((city, i) => {
                     if (i < 1000) {
                         return (
@@ -21,7 +28,7 @@ const CityList = () => {
                     }
 
                 })}
-            </ListGroup>*/}
+            </ListGroup> */}
         </>
     )
 }

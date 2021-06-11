@@ -1,0 +1,116 @@
+.header__background{
+background: #498CEC;
+border: 1px solid #979797;
+box-sizing: border-box;
+}
+.header__city{
+    display: flex;
+    flex-direction: row;
+}
+.header__city-name{
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+.header__c-f{
+    font-size: 18px;
+line-height: 22px;
+color: #FFFFFF;
+mix-blend-mode: normal;
+opacity: 0.4;
+}
+
+.header__change{
+    display: flex;
+    flex-direction: row;
+}
+.header__locate{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.header__temperature{
+    display: flex;
+    flex-direction: row;
+}
+
+.header__img{
+    width: 90px;
+    height:90px;
+}
+
+.temperature{
+font-size: 180px;
+line-height: 216px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+}
+.wind{
+    padding: 20px;
+}
+.wind__header{
+        font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+.wind__info{
+font-size: 25px;
+line-height: 30px;
+color: #FFFFFF;
+}
+.pressure{
+    padding: 20px;
+}
+.pressure__header{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.pressure__info {
+    font-size: 25px;
+line-height: 30px;
+color: #FFFFFF;
+}
+
+.humidity{
+    padding: 20px;
+}
+.humidity__header{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+.humidity__info{
+font-size: 25px;
+line-height: 30px;
+color: #FFFFFF;
+}
+.precipitation{
+    padding: 20px;
+}
+.precipitation__header{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+.precipitation__info{
+font-size: 25px;
+line-height: 30px;
+color: #FFFFFF;
+}
