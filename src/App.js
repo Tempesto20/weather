@@ -12,14 +12,13 @@ function App() {
   const [city, setCity] = useState(null);
   const [temp, setTemp] = useState(null);
   const [weatherType, setWeatherType] = useState(null);
-  const [weatherDesc, setWeatherDesc] = useState(null);
 
   const [wind, setWind] = useState(null);
   const [directionName, setDirectionName] = useState(null);
   const [pressure,  setPressure] = useState(null);
   const [humidity,  setHumidity] = useState(null);
   const [precipitation,  setPrecipitation] = useState(null);
-  const [predominantly, setPredominantlyn] = useState(null);
+  const [predominantly, setPredominantly] = useState(null);
 
 
   useEffect(() => {
@@ -44,8 +43,9 @@ function App() {
       const query =
         "/weather?" +
         parseQuery({
-          id: "542420",
+          id: "833",
           lang: "ru",
+          units: "metric",
           appid: config.appid
         });
   
@@ -55,7 +55,7 @@ function App() {
         console.log(res);
 
         setCity(res.data.name);
-        setTemp(Math.round(res.data.main.temp - 273));
+        setTemp(Math.round(res.data.main.temp));
         setWeatherType(res.data.weather[0].main);
         setWind(res.data.wind.speed);
         setDirectionName(res.data.wind.deg);
@@ -63,7 +63,7 @@ function App() {
         setPressure(res.data.main.pressure);
         setHumidity(res.data.main.humidity);
         setPrecipitation(res.data.clouds.precipitation);
-        // setPredominantly(res.data.main.predominantly);
+        setPredominantly(res.data.weather[0].description);
       });
   }, [])
 
@@ -71,6 +71,7 @@ function App() {
     <Fragment>
       <Header city={city} temp={temp} weatherType={weatherType} wind={wind} directionName={directionName} pressure={pressure} 
       humidity={humidity} precipitation={precipitation} predominantly={predominantly}    />
+      <ListCity />
       {/* <CityList /> */}
     </Fragment>
   );
