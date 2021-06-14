@@ -56,8 +56,9 @@ const Header = (props) => {
                     <div className="features">
                         <div className="wind">
                             <div className="wind__header"> Ветер </div>
-                            <div className="wind__info">{props.wind}м/с,{props.directionName}</div>
+                            <div className="wind__info">{props.wind}м/с </div> 
                         </div>
+                        {/* ,{props.directionName} */}
                         <div className="pressure">
                             <div className="pressure__header"> Давление </div>
                             <div className="pressure__info">{props.pressure}мм рт. ст.</div>
@@ -66,10 +67,10 @@ const Header = (props) => {
                             <div className="humidity__header"> Влажность </div>
                             <div className="humidity__info">{props.humidity}%</div>
                         </div>
-                        <div className="precipitation">
+                        {/* <div className="precipitation">
                             <div className="precipitation__header"> Вероятность дождя</div>
                             <div className="precipitation__info">{props.precipitation}%</div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
