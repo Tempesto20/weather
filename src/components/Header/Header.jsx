@@ -1,11 +1,12 @@
 import React from 'react';
+// import "../../../node_modules/bootstrap/scss/bootstrap";
 import PropTypes from 'prop-types';
 import cloudImg from '../../img/cloud.svg';
 import sunImg from '../../img/sun.svg';
 import partlyCloudyImg from '../../img/partlyCloudy.svg';
 import rainImg from '../../img/rain.svg';
 import stormImg from '../../img/strom.svg';
-import './Header.css'
+import './Header.scss'
 import ListCity from '../ListCity/ListCity';
 import { METRIC, STANDARD } from '../../constTemp';
 
@@ -21,6 +22,19 @@ const Header = (props) => {
                 return (
                     <img src={cloudImg} alt=""></img>
                 )
+
+            case "Rain":
+                return (
+                    <img src={rainImg} alt=""></img>
+                )
+            case "Storm":
+                return (
+                    <img src={stormImg} alt=""></img>
+                )
+            case "Partly cloudy":
+                return (
+                    <img src={partlyCloudyImg} alt=""></img>                   
+                )
             default:
                 break;
         }
@@ -31,7 +45,7 @@ const Header = (props) => {
                 <div className="header__conteiner">
                     <div className="header__city" >
 
-                        { !props.toggleCity ? <div className="header__city">{props.cityData.city}</div> : ""}
+                        { !props.toggleCity ? <div className="header__city-name">{props.cityData.city}</div> : ""}
 
                         <div className="header__c-f" >
                             <a href="#" className="header__c" onClick={() => props.setTypeTemp(METRIC)}> C </a>
@@ -48,12 +62,12 @@ const Header = (props) => {
                         { !props.toggleCity ? 
                             <>
                                 <div className="change__city" onClick={() => {props.setToggleCity(!props.toggleCity)}}>Сменить город </div>
-                                <div className="header__locate">
+                                {/* <div className="header__locate">
                                     <div className="locate__img">
                                         <img src="img/location.svg" />
                                     </div>
-                                    <div className="locate">Мое местоположение</div>
-                                </div> 
+                                    <div className="locate">Мое местоположение</div> 
+                                </div>  */}
                             </>
                             : "" }
                     </div>

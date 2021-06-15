@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import '../node_modules/bootstrap';
 import api from './api';
 import './App.css'; 
 import Header from './components/Header/Header';

@@ -1,0 +1,229 @@
+@import '../../config.scss';
+
+.header__background {
+    background: #498CEC;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    @media (max-width: $xl) {
+        background: #7290B9;
+    }
+}
+
+
+.header__city {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__city-name {
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-top: 75px;
+    @media (max-width: $xl) {
+        margin-top: 20px;
+    }
+    @media (max-width: $sm) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.header__c-f {
+    font-size: 18px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    margin: 60px 0px 0px 850px; 
+    @media (max-width: $xl) {
+        margin: 20px 0px 0px 450px;
+    }
+    @media (max-width: $lg) {
+        margin: 20px 0px 0px 300px;
+    }
+    @media (max-width: $md) {
+        margin: 20px 0px 0px 150px;
+    }
+    @media (max-width: $sm) {
+        margin: 20px 0px 0px 80px;
+    }
+}
+
+.header__c-f a {
+    text-decoration: none;
+    color: white;
+}
+
+.header__c {
+    margin-right: 5px;
+    border-right: 1px solid #FFFFFF;
+}
+
+.change__city {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 10px 0px 0px 0px;
+}
+
+.header__change {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__locate {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.header__temperature {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__img {
+    width: 120px;
+    height: 120px;
+    margin: 230px 100px 0px 350px;
+    @media (max-width: $xl) {
+        margin: 100px 100px 0px 150px;
+    }
+    @media (max-width: $lg) {
+        margin: 60px 100px 0px 150px;
+    }
+    @media (max-width: $md) {
+        margin: 40px 80px 0px 20px;
+    }
+    @media (max-width: $sm) {
+        width: 60px;
+        height: 60px;
+        margin: 20px 40px 0px 0px;
+    }
+}
+
+.temperature {
+    font-size: 180px;
+    line-height: 216px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 230px 0px 0px 20px;
+    @media (max-width: $xl) {
+        margin: 100px 0px 0px 20px;
+    }
+    @media (max-width: $lg) {
+        margin: 60px 0px 0px 20px;
+    }
+    @media (max-width: $md) {
+        margin: 40px 0px 0px 20px;
+    }
+    @media (max-width: $sm) {
+        font-size: 100px;
+        margin: 10px 0px 0px 90px;
+    }
+}
+
+.predominantly {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px 0px 0px 0px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wind__header {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 210px 262px 0px 0px;
+    @media (max-width: $xl) {
+        margin: 100px 150px 0px 0px;
+    }
+    @media (max-width: $md) {
+        margin: 80px 80px 0px 0px;
+    }
+}
+
+.wind__info {
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin: 10px 0px 120px 0px;
+}
+
+.pressure__header {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 210px 232px 0px 0px;
+    @media (max-width: $xl) {
+        margin: 100px 150px 0px 0px;
+    }
+    @media (max-width: $md) {
+        margin: 80px 80px 0px 0px;
+    }
+}
+
+.pressure__info {
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin: 10px 0px 0px 0px;
+}
+
+
+.humidity__header {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 210px 0px 0px 0px;
+    @media (max-width: $xl) {
+        margin: 100px 0px 0px 0px;
+    }
+    @media (max-width: $sm) {
+        margin: 80px 0px 0px 50px;
+    }
+    @media (max-width: $ssm) {
+        margin: 20px 0px 0px 0px;
+    }
+}
+
+.humidity__info {
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin: 10px 0px 0px 0px;
+    @media (max-width: $sm) {
+        margin: 10px 0px 0px 50px;
+    }
+
+}
+
+// .precipitation__header {
+//     font-size: 18px;
+//     line-height: 22px;
+//     color: #FFFFFF;
+//     mix-blend-mode: normal;
+//     opacity: 0.6;
+// }
+
+// .precipitation__info {
+//     font-size: 25px;
+//     line-height: 30px;
+//     color: #FFFFFF;
+//     margin: 10px 0px 0px 0px;
+// }

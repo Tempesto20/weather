@@ -37,7 +37,7 @@ const ListCity = (props) => {
           let prepareResult = [];
 
           for (let i = 0; i < filters.length; i++) {
-            if (i < 1) 
+            if (i < 3) 
               prepareResult.push(filters[i]);
             else 
               break;
