@@ -92,6 +92,7 @@ const Header = (props) => {
                             <div className="pressure__header"> Давление </div>
                             <div className="pressure__info">{props.cityData.pressure}мм рт. ст.</div>
                         </div>
+                        
                         <div className="humidity">
                             <div className="humidity__header"> Влажность </div>
                             <div className="humidity__info">{props.cityData.humidity}%</div>
